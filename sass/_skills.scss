@@ -1,0 +1,9 @@
+.skills {
+  grid-column: full-start / full-end;
+
+  margin: 15rem 5rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-gap: 5rem;
+}

@@ -1,0 +1,34 @@
+// COLOR VARIABLES
+$color-primary: #f6fcdc;
+$color-primary-dark: #B28451;
+$color-secondary: #101d2c;
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+$color-blue-medium: #4442da;
+$color-blue-dark: #09079c;
+
+// FONT VARIABLES
+$font-primary: 'Open Sans', sans-serif;
+$font-display: 'Montserrat', sans-serif;
+$default-font-size: 1.6rem;
+
+
+html {
+  font-size: 62.5%; // 1 rem = 10px;
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-grey-dark-2;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  // auto ==  min-content
+  grid-template-rows: 80vh min-content min-content repeat(2, min-content);
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}

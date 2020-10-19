@@ -1,0 +1,9 @@
+.top-3-projects {
+  background-color: $color-secondary;
+  grid-column: col-start 7 / full-end;
+}
+
+.all-projects {
+  background-color: $color-secondary;
+  grid-column: center-start / center-end;
+}

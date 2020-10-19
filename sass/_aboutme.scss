@@ -1,0 +1,49 @@
+.aboutme {
+  &__intro {
+    grid-column: full-start / col-end 4;
+    background-image:
+      linear-gradient(rgba($color-primary, .7), rgba($color-grey-light-1, 1)),
+      url(../img/about-me-bg.jpg);
+    padding: 4.5rem 10rem;
+
+    &__text {
+      font-size: $default-font-size;
+      color: $color-secondary;
+    }
+  }
+
+  &__contact-info {
+    grid-column: col-start 5 / full-end;
+
+    // background-color: darken($color-grey-light-1, 5%);
+    background-image: 
+      linear-gradient(to right,rgba($color-grey-light-1, .8), rgba($color-grey-light-2, .2)),
+      url(../img/contact-info-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4.5rem 10rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+
+    &__section {
+      display: grid;
+      grid-template-columns: min-content max-content;
+      grid-gap: 2rem;
+    }
+
+    &__icon {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    &__url {
+      font-size: 3rem;
+      font-family: $font-display;
+      font-weight: 700;
+      text-decoration: none;
+      color: $color-blue-dark;
+    }
+  }
+}
