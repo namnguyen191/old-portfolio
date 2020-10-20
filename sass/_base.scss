@@ -8,11 +8,19 @@ $color-grey-dark-1: #54483A;
 $color-grey-dark-2: #6D5D4B;
 $color-blue-medium: #4442da;
 $color-blue-dark: #09079c;
+// NATOURS
+$natours-color-primary: #55c57a;
+$natours-color-primary-light: #7ed56f;
+$natours-color-primary-dark: #28b485;
 
 // FONT VARIABLES
 $font-primary: 'Open Sans', sans-serif;
 $font-display: 'Montserrat', sans-serif;
 $default-font-size: 1.6rem;
+
+// BOX SHADOW STYLES
+$box-shadow-small: .5rem 1rem 2rem rgba(#000, .2);
+$box-shadow-medium: 0 1.5rem 4rem rgba(#000, .15);
 
 
 html {

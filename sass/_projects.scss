@@ -4,6 +4,26 @@
 }
 
 .all-projects {
-  background-color: $color-secondary;
+  margin-bottom: 5rem;
+
   grid-column: center-start / center-end;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  &__heading {
+    justify-self: center;
+    margin-bottom: 5rem;
+    font-size: 5.5rem;
+    font-family: $font-display;
+    font-weight: 700;
+    color: $color-grey-dark-2;
+    text-transform: uppercase;
+  }
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem;
 }
