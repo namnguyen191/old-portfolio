@@ -1,5 +1,11 @@
 .footer {
-  background-color: $color-primary-dark;
+  background-color: lighten($color-primary, 5%);
   grid-row: 5 / -1;
   grid-column: full-start / full-end;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  color: $color-grey-dark-1;
+  margin-left: 2rem;
 }

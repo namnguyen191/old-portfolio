@@ -6,8 +6,9 @@ $color-grey-light-1: #f9f7f6;
 $color-grey-light-2: #aaa;
 $color-grey-dark-1: #54483A;
 $color-grey-dark-2: #6D5D4B;
-$color-blue-medium: #4442da;
+$color-blue-medium: #06499c;
 $color-blue-dark: #09079c;
+$color-pink-dark: #b532ab;
 // NATOURS
 $natours-color-primary: #55c57a;
 $natours-color-primary-light: #7ed56f;
@@ -32,6 +33,7 @@ body {
   color: $color-grey-dark-2;
   font-weight: 400;
   line-height: 1.6;
+  background-color: $color-primary;
 }
 
 .container {

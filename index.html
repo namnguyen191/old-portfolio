@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- Import Google Font -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,700&display=swap"
     rel="stylesheet">
   <!-- Insert icon -->
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -19,11 +19,13 @@
 
 <body class="container">
   <div class="sidebar">
-    Side bar
+    <button href="#" class="nav-btn"></button>
   </div>
 
   <header class="header">
-    Header
+    <img src="img/logo-crop.png" alt="Nam Nguyen Logo" class="header__logo">
+    <h1 class="heading-1">Nam Nguyen</h1>
+    <h3 class="heading-3">The Developer | Student | Thinker</h3>
   </header>
 
   <div class="top-3-projects">
@@ -162,9 +164,10 @@
         </div>
         <div class="card__side card__side--back card__side--back-natour">
           <div class="card__cta">
-            <div class="card__price-box">
-              <p class="card__price-only">A simple Travel Website built with HTML and CSS.</p>
-              <a href="http://www.udemynatoursproject.esy.es" class="card__price-value card__price-value-natour">View Site</a>
+            <div class="card__cta-detail">
+              <p class="card__cta-desc">A simple Travel Website built using advance CSS techniques.</p>
+              <a href="http://www.udemynatoursproject.esy.es" class="card__cta-link card__cta-link-natour"
+                target="_blank">View Site</a>
             </div>
             <a href="#popup" class="btn btn--white">Demo</a>
           </div>
@@ -189,9 +192,9 @@
         </div>
         <div class="card__side card__side--back card__side--back-natour">
           <div class="card__cta">
-            <div class="card__price-box">
-              <p class="card__price-only">A simple Travel Website built with HTML and CSS.</p>
-              <a href="http://www.udemynatoursproject.esy.es" class="card__price-value">View Site</a>
+            <div class="card__cta-detail">
+              <p class="card__cta-desc">A simple Travel Website built with HTML and CSS.</p>
+              <a href="http://www.udemynatoursproject.esy.es" class="card__cta-link card__cta-link-natour">View Site</a>
             </div>
             <a href="#popup" class="btn btn--white">Demo</a>
           </div>
@@ -216,127 +219,63 @@
         </div>
         <div class="card__side card__side--back card__side--back-natour">
           <div class="card__cta">
-            <div class="card__price-box">
-              <p class="card__price-only">A simple Travel Website built with HTML and CSS.</p>
-              <a href="http://www.udemynatoursproject.esy.es" class="card__price-value">View Site</a>
+            <div class="card__cta-detail">
+              <p class="card__cta-desc">A simple Travel Website built using advance CSS.</p>
+              <a href="http://www.udemynatoursproject.esy.es" class="card__cta-link card__cta-link-natour">View Site</a>
             </div>
             <a href="#popup" class="btn btn--white">Demo</a>
           </div>
         </div>
       </div>
       <div class="card">
-        <div class="card__side card__side--front">
-          <div class="card__picture card__picture--natour">
-            &nbsp;
-          </div>
-          <h4 class="card__heading">
-            <span class="card__heading-span card__heading-span--natour">Natour Travel Website</span>
-          </h4>
-          <div class="card__details">
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>SASS</li>
-              <li>BOOTSTRAP</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card__side card__side--back card__side--back-natour">
-          <div class="card__cta">
-            <div class="card__price-box">
-              <p class="card__price-only">A simple Travel Website built with HTML and CSS.</p>
-              <a href="http://www.udemynatoursproject.esy.es" class="card__price-value">View Site</a>
-            </div>
-            <a href="#popup" class="btn btn--white">Demo</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card__side card__side--front">
-          <div class="card__picture card__picture--natour">
-            &nbsp;
-          </div>
-          <h4 class="card__heading">
-            <span class="card__heading-span card__heading-span--natour">Natour Travel Website</span>
-          </h4>
-          <div class="card__details">
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>SASS</li>
-              <li>BOOTSTRAP</li>
-            </ul>
+        <div class="card__side card__side--front card__side--front-more">
+          <h3>And more to come</h3>
+          <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              style="margin:auto;background:#fff;display:block;" width="15rem" height="15rem" viewBox="0 0 100 100"
+              preserveAspectRatio="xMidYMid">
+              <g transform="translate(20 50)">
+                <circle cx="0" cy="0" r="6" fill="#e15b64">
+                  <animateTransform attributeName="transform" type="scale" begin="-0.375s" calcMode="spline"
+                    keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s"
+                    repeatCount="indefinite"></animateTransform>
+                </circle>
+              </g>
+              <g transform="translate(40 50)">
+                <circle cx="0" cy="0" r="6" fill="#f8b26a">
+                  <animateTransform attributeName="transform" type="scale" begin="-0.25s" calcMode="spline"
+                    keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s"
+                    repeatCount="indefinite"></animateTransform>
+                </circle>
+              </g>
+              <g transform="translate(60 50)">
+                <circle cx="0" cy="0" r="6" fill="#abbd81">
+                  <animateTransform attributeName="transform" type="scale" begin="-0.125s" calcMode="spline"
+                    keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s"
+                    repeatCount="indefinite"></animateTransform>
+                </circle>
+              </g>
+              <g transform="translate(80 50)">
+                <circle cx="0" cy="0" r="6" fill="#81a3bd">
+                  <animateTransform attributeName="transform" type="scale" begin="0s" calcMode="spline"
+                    keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s"
+                    repeatCount="indefinite"></animateTransform>
+                </circle>
+              </g>
+            </svg>
           </div>
         </div>
-        <div class="card__side card__side--back card__side--back-natour">
-          <div class="card__cta">
-            <div class="card__price-box">
-              <p class="card__price-only">A simple Travel Website built with HTML and CSS.</p>
-              <a href="http://www.udemynatoursproject.esy.es" class="card__price-value">View Site</a>
-            </div>
-            <a href="#popup" class="btn btn--white">Demo</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card__side card__side--front">
-          <div class="card__picture card__picture--natour">
-            &nbsp;
-          </div>
-          <h4 class="card__heading">
-            <span class="card__heading-span card__heading-span--natour">Natour Travel Website</span>
-          </h4>
-          <div class="card__details">
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>SASS</li>
-              <li>BOOTSTRAP</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card__side card__side--back card__side--back-natour">
-          <div class="card__cta">
-            <div class="card__price-box">
-              <p class="card__price-only">A simple Travel Website built with HTML and CSS.</p>
-              <a href="http://www.udemynatoursproject.esy.es" class="card__price-value">View Site</a>
-            </div>
-            <a href="#popup" class="btn btn--white">Demo</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card__side card__side--front">
-          <div class="card__picture card__picture--natour">
-            &nbsp;
-          </div>
-          <h4 class="card__heading">
-            <span class="card__heading-span card__heading-span--natour">Natour Travel Website</span>
-          </h4>
-          <div class="card__details">
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>SASS</li>
-              <li>BOOTSTRAP</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card__side card__side--back card__side--back-natour">
-          <div class="card__cta">
-            <div class="card__price-box">
-              <p class="card__price-only">A simple Travel Website built with HTML and CSS.</p>
-              <a href="http://www.udemynatoursproject.esy.es" class="card__price-value">View Site</a>
-            </div>
-            <a href="#popup" class="btn btn--white">Demo</a>
-          </div>
+        <div class="card__side card__side--back card__side--back-more">
+          <p>&ldquo; I’ M STILL LEARNING.&rdquo; MICHELANGELO</p>
         </div>
       </div>
     </div>
   </section>
 
   <footer class="footer">
-    Footer
+    <p class="copyright">
+      &copy; 2020 by Nam Nguyen. All rights reserved. Free to use for learning purposes.
+    </p>
   </footer>
 </body>
 
