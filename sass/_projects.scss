@@ -1,6 +1,44 @@
 .top-3-projects {
-  background-color: $color-secondary;
   grid-column: col-start 7 / full-end;
+  
+  background-color: darken($color-secondary, 4%);
+  padding: 5rem;
+
+  display: grid;
+  align-content: center;
+  justify-content: center;
+
+  &__list {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    grid-gap: 5vh 2rem;
+    align-items: center;
+  }
+
+  &__image {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    display: block;
+  }
+
+  &__detail {
+    
+  }
+
+  &__high-light {
+    color: $color-grey-light-1;
+    font-size: $default-font-size;
+  }
+
+  h4, p {
+    margin: 0;
+  }
+
+  h3 {
+    color: lighten($color-grey-dark-1, 25%);
+    font-size: 3.5rem;
+  }
 }
 
 .all-projects {

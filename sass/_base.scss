@@ -42,3 +42,13 @@ body {
   grid-template-rows: 80vh min-content min-content repeat(2, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
+
+// Cursor effect for typewriter
+.txt-type {
+  font-style: italic;
+  display: inline-block;
+
+  .txt {
+    border-right: .2rem solid #777;
+  }
+}

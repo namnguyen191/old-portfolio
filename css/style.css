@@ -318,14 +318,23 @@ body {
   grid-template-rows: 80vh min-content min-content repeat(2, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
+.txt-type {
+  font-style: italic;
+  display: inline-block; }
+  .txt-type .txt {
+    border-right: .2rem solid #777; }
+
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700; }
 
 .heading-1 {
   font-size: 4.5rem;
-  color: #54483A;
   line-height: 1; }
+  .heading-1--light {
+    color: #f9f7f6; }
+  .heading-1--dark {
+    color: #54483A; }
 
 .heading-2 {
   font-size: 4rem;
@@ -346,7 +355,7 @@ body {
     font-style: italic; }
 
 .heading-4 {
-  font-size: 1.8; }
+  font-size: 1.8rem; }
   .heading-4--light {
     color: #f9f7f6; }
   .heading-4--dark {
@@ -359,17 +368,45 @@ body {
 
 .header {
   grid-column: full-start / col-end 6;
-  background-image: linear-gradient(to right bottom, white 0%, rgba(178, 132, 81, 0.1) 100%), url(../img/nam-photo-crop.jpg);
+  background-image: linear-gradient(to right, rgba(104, 97, 97, 0.95), rgba(0, 0, 0, 0.95)), url(../img/nam-photo-no-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top left; }
+  background-position: center;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  align-content: center; }
   .header__logo {
     width: 27rem;
-    height: 5.25rem; }
+    height: 5.25rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem; }
 
 .top-3-projects {
-  background-color: #101d2c;
-  grid-column: col-start 7 / full-end; }
+  grid-column: col-start 7 / full-end;
+  background-color: #0b131d;
+  padding: 5rem;
+  display: grid;
+  align-content: center;
+  justify-content: center; }
+  .top-3-projects__list {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    grid-gap: 5vh 2rem;
+    align-items: center; }
+  .top-3-projects__image {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    display: block; }
+  .top-3-projects__high-light {
+    color: #f9f7f6;
+    font-size: 1.6rem; }
+  .top-3-projects h4, .top-3-projects p {
+    margin: 0; }
+  .top-3-projects h3 {
+    color: #9d8871;
+    font-size: 3.5rem; }
 
 .all-projects {
   margin-bottom: 5rem;

@@ -2,14 +2,22 @@
   grid-column: full-start / col-end 6;
 
   background-image: 
-    linear-gradient(to right bottom, rgba(#fff, 1) 0%, rgba($color-primary-dark, 0.1) 100%),
-    url(../img/nam-photo-crop.jpg);
+    linear-gradient(to right, rgba(#686161, .95), rgba(#000, .95)),
+    url(../img/nam-photo-no-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top left;
+  background-position: center;
+  padding: 0 3rem;
+
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  align-content: center;
 
   &__logo {
     width: 27rem;
     height: 5.25rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
   }
+
 }
