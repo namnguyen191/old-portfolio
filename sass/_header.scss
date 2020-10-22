@@ -1,6 +1,10 @@
 .header {
   grid-column: full-start / col-end 6;
 
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+  }
+
   background-image: 
     linear-gradient(to right, rgba(#686161, .95), rgba(#000, .95)),
     url(../img/nam-photo-no-bg.jpg);
@@ -10,6 +14,7 @@
   padding: 0 3rem;
 
   display: grid;
+  grid-template-columns: minmax(min-content, max-content);
   grid-template-rows: repeat(2, min-content);
   align-content: center;
 

@@ -23,9 +23,32 @@ $default-font-size: 1.6rem;
 $box-shadow-small: .5rem 1rem 2rem rgba(#000, .2);
 $box-shadow-medium: 0 1.5rem 4rem rgba(#000, .15);
 
+// Break Points for media queries
+$bp-largest: 100em; // 1600 / 16 (default font size)
+$bp-large: 75em; // 1200px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px;
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
 
 html {
   font-size: 62.5%; // 1 rem = 10px;
+  box-sizing: border-box;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 37.5%;
+  }
 }
 
 body {
@@ -41,6 +64,15 @@ body {
   // auto ==  min-content
   grid-template-rows: 80vh min-content min-content repeat(2, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-rows: 6rem 80vh min-content min-content repeat(2, min-content);
+    grid-template-columns: [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: 6rem calc(100vh - 6rem - 25rem) min-content min-content min-content repeat(2, min-content);
+  }
 }
 
 // Cursor effect for typewriter

@@ -1,8 +1,10 @@
 .footer {
   background-color: lighten($color-primary, 5%);
-  grid-row: 5 / -1;
+
   grid-column: full-start / full-end;
+  grid-row-start: 9999;
 }
+
 
 .copyright {
   font-size: 1.4rem;
