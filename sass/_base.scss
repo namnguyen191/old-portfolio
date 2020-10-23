@@ -2,6 +2,7 @@
 $color-primary: #f6fcdc;
 $color-primary-dark: #B28451;
 $color-secondary: #101d2c;
+$color-tertiary: #23232e;
 $color-grey-light-1: #f9f7f6;
 $color-grey-light-2: #aaa;
 $color-grey-dark-1: #54483A;
@@ -9,6 +10,7 @@ $color-grey-dark-2: #6D5D4B;
 $color-blue-medium: #06499c;
 $color-blue-dark: #09079c;
 $color-pink-dark: #b532ab;
+$color-pink-light:#fac8f5;
 // NATOURS
 $natours-color-primary: #55c57a;
 $natours-color-primary-light: #7ed56f;
@@ -57,21 +59,39 @@ body {
   font-weight: 400;
   line-height: 1.6;
   background-color: $color-primary;
+
+  // Customize scrollbar
+  &::-webkit-scrollbar {
+    width: .75rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: lighten($color-secondary, 25%);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $color-secondary;
+  }
 }
 
 .container {
   display: grid;
   // auto ==  min-content
   grid-template-rows: 80vh min-content min-content repeat(2, min-content);
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [navbar-start] 8rem [navbar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
   @media only screen and (max-width: $bp-large) {
-    grid-template-rows: 6rem 80vh min-content min-content repeat(2, min-content);
-    grid-template-columns: [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-rows: 80vh min-content min-content repeat(2, min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   }
 
   @media only screen and (max-width: $bp-medium) {
     grid-template-rows: 6rem calc(100vh - 6rem - 25rem) min-content min-content min-content repeat(2, min-content);
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    // Margin-bottom to create space for navbar
+    margin-bottom: 9rem;
   }
 }
 

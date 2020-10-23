@@ -18,11 +18,46 @@
 </head>
 
 <body class="container">
-  <div class="sidebar">
-    <button href="#" class="nav-btn"></button>
-  </div>
+  <nav class="navbar">
+    <ul class="navbar__nav">
+      <li class="nav-item">
+        <a href="#home" class="nav-link">
+          <i class="fas fa-home fa-fw"></i>
+          <span class="link-text">Home</span>
+        </a>
+      </li>
 
-  <header class="header">
+      <li class="nav-item">
+        <a href="#about" class="nav-link">
+          <i class="fas fa-user-circle fa-fw"></i>
+          <span class="link-text">About</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#stacks" class="nav-link">
+          <i class="fas fa-layer-group fa-fw"></i>
+          <span class="link-text">Stacks</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#projects" class="nav-link">
+          <i class="fas fa-code fa-fw"></i>
+          <span class="link-text">Projects</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="https://github.com/namnguyen191" target="_blank" class="nav-link">
+          <i class="fab fa-github fa-fw"></i>
+          <span class="link-text">Github</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <header class="header" id="home">
     <!-- <img src="img/logo-crop.png" alt="Nam Nguyen Logo" class="header__logo"> -->
     <h1 class="heading-1 heading-1--light">
       Nam Nguyen The
@@ -52,7 +87,7 @@
     </div>
   </div>
 
-  <div class="aboutme__intro">
+  <div class="aboutme__intro" id="about">
     <h3 class="heading-2 heading-2--dark">About Me</h3>
     <p class="aboutme__intro__text">
       Hi there! I'm Nam Nguyen from Toronton, Canada. I'm currently pursuing my B.Sc. in Computer Science at York
@@ -95,7 +130,7 @@
     </div>
   </div>
 
-  <section class="skills">
+  <section class="skills" id="stacks">
     <div class="feature-box">
       <img src="img/svg/front-end.svg" alt="front-end developer icon" class="feature-box__icon">
       <h3 class="heading-3 heading-3--dark">FRONT-END</h3>
@@ -162,7 +197,7 @@
     </div>
   </section>
 
-  <section class="all-projects">
+  <section class="all-projects" id="projects">
     <h1 class="all-projects__heading">Projects Portfolio</h1>
     <div class="projects">
       <div class="card">
@@ -300,6 +335,8 @@
 
   <!-- Insert JS -->
   <script type="module" src="js/main.js"></script>
+  <!-- Import font-awesome icon -->
+  <script src="https://kit.fontawesome.com/de535885c1.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
