@@ -343,7 +343,7 @@ body {
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; } }
   @media only screen and (max-width: 56.25em) {
     .container {
-      grid-template-rows: calc(65vh) min-content min-content min-content repeat(2, min-content); } }
+      grid-template-rows: 6rem calc(100vh - 6rem - 25rem) min-content min-content min-content repeat(2, min-content); } }
   @media only screen and (max-width: 75em) {
     .container {
       margin-bottom: 9rem; } }
@@ -486,12 +486,12 @@ body {
   padding: 5rem;
   display: grid;
   align-content: center;
-  justify-content: center;
-  grid-gap: 2rem; }
+  justify-content: center; }
   @media only screen and (max-width: 56.25em) {
     .top-3-projects {
       grid-column: 1 / -1;
-      grid-row-gap: 2rem; } }
+      grid-row-gap: 2rem;
+      height: 25rem; } }
   .top-3-projects__list {
     display: grid;
     grid-template-columns: min-content max-content;
@@ -499,7 +499,7 @@ body {
     align-items: center; }
     @media only screen and (max-width: 56.25em) {
       .top-3-projects__list {
-        grid-template-rows: repeat(3, min-content); } }
+        grid-template-columns: repeat(3, min-content max-content); } }
   .top-3-projects__image {
     width: 7rem;
     height: 7rem;
