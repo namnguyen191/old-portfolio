@@ -53,6 +53,22 @@
               background-image: linear-gradient(to right bottom, #000, $natours-color-primary-dark);
             }
 
+            &-nexter {
+              background-image: linear-gradient(to right bottom, #000, darken($nexter-color-primary-dark, 17%));
+            }
+
+            &-trillio {
+              background-image: linear-gradient(to right bottom, #000, $trillio-color-primary-dark);
+            }
+
+            &-sirvey {
+              background-image: linear-gradient(to right bottom, #000, darken($sirvey-color-primary, 10%));
+            }
+
+            &-datingapp {
+              background-image: linear-gradient(to right bottom, #000, darken($datingapp-color-primary, 10%));
+            }
+
             &-more {
               font-size: 2.3rem;
               font-weight: 700;
@@ -89,7 +105,31 @@
         &--natour {
             background-image: 
                 linear-gradient(to right bottom, #000, $natours-color-primary-dark),
-                url(../img/natour.jpg);
+                url(../img/natour.webp);
+        }
+
+        &--nexter {
+            background-image: 
+                linear-gradient(to right bottom, $color-secondary, $nexter-color-primary-dark),
+                url(../img/nexter-min.webp);
+        }
+
+        &--trillio {
+            background-image: 
+                linear-gradient(to right bottom, #000, $trillio-color-primary-dark),
+                url(../img/trillio-min.webp);
+        }
+
+        &--sirvey {
+            background-image: 
+                linear-gradient(to right bottom, #000, darken($sirvey-color-primary, 10%)),
+                url(../img/survey.webp);
+        }
+
+        &--datingapp {
+            background-image: 
+                linear-gradient(to right bottom, #000, darken($datingapp-color-primary, 10%)),
+                url(../img/dating-app-crop.webp);
         }
     }
 
@@ -116,6 +156,30 @@
             background-image: linear-gradient(to right bottom, 
                 rgba($natours-color-primary-light, .85), 
                 rgba($natours-color-primary-dark, .85));
+        }
+
+        &--nexter {
+            background-image: linear-gradient(to right bottom, 
+                rgba($nexter-color-primary-dark, .85), 
+                rgba(darken($nexter-color-primary-dark, 10%), .85));
+        }
+
+        &--trillio {
+            background-image: linear-gradient(to right bottom, 
+                rgba($trillio-color-primary, .85), 
+                rgba($nexter-color-primary-dark, .85));
+        }
+
+        &--sirvey {
+            background-image: linear-gradient(to right bottom, 
+                rgba($sirvey-color-primary, .85), 
+                rgba(darken($sirvey-color-primary, 10%), .85));
+        }
+
+        &--datingapp {
+            background-image: linear-gradient(to right bottom, 
+                rgba($datingapp-color-primary, .85), 
+                rgba(darken($datingapp-color-primary, 10%), .85));
         }
     }
 
@@ -173,20 +237,36 @@
         font-weight: 700;
         font-family: $font-display;
         text-decoration: none;
+        display: block; // just so that we can transform
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        transition: all .2s;
+
+        &:hover {
+          transform: skewY(1deg) skewX(10deg) scale(1.1);
+          text-shadow: $box-shadow-small;
+        }
        
 
         &-natour {
-          color: transparent;
-          -webkit-background-clip: text;
-          background-clip: text;
-          transition: all .2s;
-          display: block; // just so that we can transform
-          background-image: linear-gradient(to right,$natours-color-primary-dark, $natours-color-primary-light);
+          background-image: linear-gradient(to right, $natours-color-primary-dark, $natours-color-primary-light);
+        }
 
-          &:hover {
-            transform: skewY(1deg) skewX(10deg) scale(1.1);
-            text-shadow: $box-shadow-small;
-          }
+        &-nexter {
+          background-image: linear-gradient(to right, $nexter-color-primary-dark, lighten($nexter-color-primary, 5%));
+        }
+
+        &-trillio {
+          background-image: linear-gradient(to right, $trillio-color-primary-light, $trillio-color-primary-dark);
+        }
+
+        &-sirvey {
+          background-image: linear-gradient(to right, lighten($sirvey-color-primary, 10%), darken($sirvey-color-primary, 10%));
+        }
+
+        &-datingapp {
+          background-image: linear-gradient(to right, lighten($datingapp-color-primary, 10%), darken($datingapp-color-primary, 10%));
         }
     }
 
@@ -240,5 +320,19 @@
         }
     }
 
+    .github-link {
+      position: relative;
+
+      i {
+        font-size: 8rem;
+        color: $color-secondary;
+        transition: all 200ms ease;
+
+        &:hover {
+          transform: translateY(-1rem);
+          color: lighten($color-secondary, 10%);
+        }
+      }
+    }
 
 }

@@ -343,7 +343,7 @@ body {
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; } }
   @media only screen and (max-width: 56.25em) {
     .container {
-      grid-template-rows: 6rem calc(100vh - 6rem - 25rem) min-content min-content min-content repeat(2, min-content); } }
+      grid-template-rows: calc(65vh) min-content min-content min-content repeat(2, min-content); } }
   @media only screen and (max-width: 75em) {
     .container {
       margin-bottom: 9rem; } }
@@ -462,7 +462,7 @@ body {
 
 .header {
   grid-column: full-start / col-end 6;
-  background-image: linear-gradient(to right, rgba(104, 97, 97, 0.95), rgba(0, 0, 0, 0.95)), url(../img/nam-photo-no-bg.jpg);
+  background-image: linear-gradient(to right, rgba(104, 97, 97, 0.95), rgba(0, 0, 0, 0.95)), url(../img/nam-photo-no-bg.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -486,12 +486,12 @@ body {
   padding: 5rem;
   display: grid;
   align-content: center;
-  justify-content: center; }
+  justify-content: center;
+  grid-gap: 2rem; }
   @media only screen and (max-width: 56.25em) {
     .top-3-projects {
       grid-column: 1 / -1;
-      grid-row-gap: 2rem;
-      height: 25rem; } }
+      grid-row-gap: 2rem; } }
   .top-3-projects__list {
     display: grid;
     grid-template-columns: min-content max-content;
@@ -499,12 +499,13 @@ body {
     align-items: center; }
     @media only screen and (max-width: 56.25em) {
       .top-3-projects__list {
-        grid-template-columns: repeat(3, min-content max-content); } }
+        grid-template-rows: repeat(3, min-content); } }
   .top-3-projects__image {
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
-    display: block; }
+    display: block;
+    object-fit: cover; }
   .top-3-projects__high-light {
     color: #f9f7f6;
     font-size: 1.6rem; }
@@ -537,6 +538,20 @@ body {
     .projects {
       grid-template-columns: repeat(auto-fit, minmax(64rem, 1fr)); } }
 
+.project-link {
+  display: block;
+  text-decoration: none;
+  font-size: 3.7rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #f9f7f6;
+  transition: all 200ms ease-in; }
+  .project-link:hover {
+    transform: translateY(-1rem);
+    background-color: #17293f;
+    text-decoration: underline;
+    box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
 .skills {
   grid-column: full-start / full-end;
   margin: 15rem 5rem;
@@ -546,7 +561,7 @@ body {
 
 .aboutme__intro {
   grid-column: full-start / col-end 4;
-  background-image: linear-gradient(rgba(246, 252, 220, 0.7), #f9f7f6), url(../img/about-me-bg.jpg);
+  background-image: linear-gradient(rgba(246, 252, 220, 0.7), #f9f7f6), url(../img/about-me-bg.webp);
   padding: 4.5rem 10rem; }
   @media only screen and (max-width: 56.25em) {
     .aboutme__intro {
@@ -557,7 +572,7 @@ body {
 
 .aboutme__contact-info {
   grid-column: col-start 5 / full-end;
-  background-image: linear-gradient(to right, rgba(249, 247, 246, 0.8), rgba(170, 170, 170, 0.2)), url(../img/contact-info-background.png);
+  background-image: linear-gradient(to right, rgba(249, 247, 246, 0.8), rgba(170, 170, 170, 0.2)), url(../img/contact-info-background.webp);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 4.5rem 10rem;
@@ -665,6 +680,14 @@ body {
       animation-fill-mode: backwards; }
       .card__side--back-natour {
         background-image: linear-gradient(to right bottom, #000, #28b485); }
+      .card__side--back-nexter {
+        background-image: linear-gradient(to right bottom, #000, #775835); }
+      .card__side--back-trillio {
+        background-image: linear-gradient(to right bottom, #000, #BA265D); }
+      .card__side--back-sirvey {
+        background-image: linear-gradient(to right bottom, #000, #e94047); }
+      .card__side--back-datingapp {
+        background-image: linear-gradient(to right bottom, #000, #c34113); }
       .card__side--back-more {
         font-size: 2.3rem;
         font-weight: 700;
@@ -686,7 +709,15 @@ body {
     border-top-left-radius: .3rem;
     border-top-right-radius: .3rem; }
     .card__picture--natour {
-      background-image: linear-gradient(to right bottom, #000, #28b485), url(../img/natour.jpg); }
+      background-image: linear-gradient(to right bottom, #000, #28b485), url(../img/natour.webp); }
+    .card__picture--nexter {
+      background-image: linear-gradient(to right bottom, #101d2c, #B28451), url(../img/nexter-min.webp); }
+    .card__picture--trillio {
+      background-image: linear-gradient(to right bottom, #000, #BA265D), url(../img/trillio-min.webp); }
+    .card__picture--sirvey {
+      background-image: linear-gradient(to right bottom, #000, #e94047), url(../img/survey.webp); }
+    .card__picture--datingapp {
+      background-image: linear-gradient(to right bottom, #000, #c34113), url(../img/dating-app-crop.webp); }
   .card__heading {
     font-size: 2.4rem;
     font-weight: 400;
@@ -703,6 +734,14 @@ body {
     box-decoration-break: clone; }
     .card__heading-span--natour {
       background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card__heading-span--nexter {
+      background-image: linear-gradient(to right bottom, rgba(178, 132, 81, 0.85), rgba(144, 106, 64, 0.85)); }
+    .card__heading-span--trillio {
+      background-image: linear-gradient(to right bottom, rgba(235, 47, 100, 0.85), rgba(178, 132, 81, 0.85)); }
+    .card__heading-span--sirvey {
+      background-image: linear-gradient(to right bottom, rgba(238, 110, 115, 0.85), rgba(233, 64, 71, 0.85)); }
+    .card__heading-span--datingapp {
+      background-image: linear-gradient(to right bottom, rgba(233, 84, 32, 0.85), rgba(195, 65, 19, 0.85)); }
   .card__details {
     padding: 3rem; }
     .card__details ul {
@@ -736,17 +775,25 @@ body {
     font-size: 3rem;
     font-weight: 700;
     font-family: "Montserrat", sans-serif;
-    text-decoration: none; }
+    text-decoration: none;
+    display: block;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: all .2s; }
+    .card__cta-link:hover {
+      transform: skewY(1deg) skewX(10deg) scale(1.1);
+      text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
     .card__cta-link-natour {
-      color: transparent;
-      -webkit-background-clip: text;
-      background-clip: text;
-      transition: all .2s;
-      display: block;
       background-image: linear-gradient(to right, #28b485, #7ed56f); }
-      .card__cta-link-natour:hover {
-        transform: skewY(1deg) skewX(10deg) scale(1.1);
-        text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .card__cta-link-nexter {
+      background-image: linear-gradient(to right, #B28451, #cda576); }
+    .card__cta-link-trillio {
+      background-image: linear-gradient(to right, #FF3366, #BA265D); }
+    .card__cta-link-sirvey {
+      background-image: linear-gradient(to right, #f39c9f, #e94047); }
+    .card__cta-link-datingapp {
+      background-image: linear-gradient(to right, #ee784e, #c34113); }
   @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     .card {
       height: auto;
@@ -776,6 +823,15 @@ body {
       .card__cta-link {
         margin-top: 1rem;
         font-size: 3rem; } }
+  .card .github-link {
+    position: relative; }
+    .card .github-link i {
+      font-size: 8rem;
+      color: #101d2c;
+      transition: all 200ms ease; }
+      .card .github-link i:hover {
+        transform: translateY(-1rem);
+        color: #1e3651; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -847,3 +903,32 @@ body {
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
+
+.tooltip {
+  position: relative; }
+  .tooltip:hover .tooltiptext {
+    visibility: visible; }
+
+.tooltiptext {
+  visibility: hidden;
+  font-size: 1.6rem;
+  width: 12rem;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: .6rem;
+  padding: .5rem 0;
+  position: absolute;
+  z-index: 1;
+  top: 90%;
+  left: 50%;
+  margin-left: -6rem; }
+  .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -.5rem;
+    border-width: .5rem;
+    border-style: solid;
+    border-color: transparent transparent black transparent; }

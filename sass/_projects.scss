@@ -31,10 +31,7 @@
     height: 7rem;
     border-radius: 50%;
     display: block;
-  }
-
-  &__detail {
-    
+    object-fit: cover;
   }
 
   &__high-light {
@@ -79,5 +76,22 @@
 
   @media only screen and (hover:none) {
     grid-template-columns: repeat(auto-fit, minmax(64rem, 1fr)); // The card width is 64rem
+  }
+}
+
+.project-link {
+  display: block;
+  text-decoration: none;
+  font-size: 3.7rem;
+  font-family: $font-display;
+  font-weight: 500;
+  color: $color-grey-light-1;
+  transition: all 200ms ease-in;
+
+  &:hover {
+    transform: translateY(-1rem);
+    background-color:lighten($color-secondary, 5%);
+    text-decoration: underline;
+    box-shadow: $box-shadow-small;
   }
 }
