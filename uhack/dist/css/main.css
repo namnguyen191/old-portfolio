@@ -1,0 +1,293 @@
+.logo--mlh {
+  width: 8.125rem;
+  height: 14.1875rem;
+  position: fixed;
+  top: 0;
+  left: 85.9375vw;
+  z-index: 99999999999999;
+  transition: all 200ms ease-out; }
+  .logo--mlh:hover {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
+  @media only screen and (max-width: 75em) {
+    .logo--mlh {
+      left: auto;
+      right: 0; } }
+  @media only screen and (max-width: 48em) {
+    .logo--mlh {
+      display: none; } }
+
+.mynavbar {
+  border-bottom: 0.0625rem solid #51b7cd;
+  padding-left: 7.5vw;
+  padding-right: 17vw;
+  background-color: white;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  z-index: 9999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; }
+  @media only screen and (max-width: 75em) {
+    .mynavbar {
+      padding-left: 0; } }
+  .mynavbar .nav-items-list {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 50% repeat(7, max-content);
+    grid-gap: 2rem;
+    align-items: center;
+    list-style: none; }
+    @media only screen and (max-width: 64em) {
+      .mynavbar .nav-items-list {
+        grid-gap: 1rem; } }
+    .mynavbar .nav-items-list .nav-item {
+      transition: all 50s ease-in; }
+      .mynavbar .nav-items-list .nav-item .nav-link {
+        padding: 0;
+        margin: 0;
+        display: block;
+        font-family: "Roboto", sans-serif;
+        font-size: 1.3rem;
+        text-decoration: none;
+        color: #919191;
+        transition: all 150ms ease-in;
+        border-bottom: 0 solid rgba(35, 235, 220, 0); }
+        .mynavbar .nav-items-list .nav-item .nav-link:hover {
+          background-color: #f2f2f2;
+          transform: translateY(-0.2rem); }
+      .mynavbar .nav-items-list .nav-item .active {
+        border-bottom: 0.4375rem solid #23ebdc; }
+  .mynavbar .logo--lion {
+    width: 6.1875rem;
+    height: 5.25rem; }
+
+* {
+  scroll-behavior: smooth; }
+
+.home {
+  line-height: 1;
+  margin-bottom: 15rem;
+  font-family: "Roboto", sans-serif;
+  color: #919191;
+  margin-top: 20.4375rem;
+  padding: 0 13vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  @media only screen and (max-width: 109.375em) {
+    .home {
+      padding: 0 3vw; } }
+  @media only screen and (max-width: 87.5em) {
+    .home {
+      padding: 0 13vw;
+      grid-template-columns: 1fr; } }
+  @media only screen and (max-width: 40.625em) {
+    .home {
+      padding: 0 0; } }
+  .home .date .heading-medium {
+    margin: 0;
+    font-size: 3.75rem;
+    font-weight: 500; }
+  .home .date .heading-small {
+    margin: 0;
+    font-size: 1.875rem; }
+  .home .date .countdown-container {
+    margin-top: 1.875rem;
+    margin-bottom: 3.75rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, min-content); }
+    .home .date .countdown-container .countdown {
+      display: grid;
+      grid-template-rows: repeat(2, min-content);
+      grid-gap: 1.25rem; }
+      .home .date .countdown-container .countdown__number {
+        position: relative;
+        padding: 1.75rem 0.9375rem;
+        background-color: rgba(145, 145, 145, 0.2);
+        border-radius: 1.0625rem;
+        text-align: center;
+        font-size: 5rem;
+        font-weight: 500; }
+        .home .date .countdown-container .countdown__number .number-text {
+          position: relative;
+          margin: 0;
+          z-index: 999999; }
+        .home .date .countdown-container .countdown__number::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 0.875rem;
+          background-color: #ffffff;
+          width: 100%; }
+      .home .date .countdown-container .countdown__text {
+        text-align: center;
+        font-size: 1.25rem;
+        text-transform: uppercase; }
+  .home .date .social-media {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-gap: 1.875rem; }
+    .home .date .social-media .icons-container {
+      display: grid;
+      grid-template-columns: repeat(3, min-content);
+      grid-gap: 1.25rem; }
+    .home .date .social-media__link {
+      text-decoration: none;
+      color: #919191;
+      font-size: 2rem; }
+  .home .info {
+    text-align: right;
+    padding-top: 3.625rem; }
+    .home .info .heading-1 {
+      padding: 0;
+      margin-top: 0;
+      font-size: 6.25rem;
+      font-weight: 500;
+      color: #51b7cd;
+      margin-bottom: 0.9375rem; }
+    .home .info .heading-3 {
+      font-size: 2.5rem;
+      color: #2d698a;
+      margin-top: 0;
+      margin-bottom: 3.125rem; }
+    .home .info .event-date,
+    .home .info .event-location {
+      margin-top: 0.9375rem;
+      display: block;
+      font-size: 1.875rem;
+      color: #2d698a; }
+      .home .info .event-date .icon-small,
+      .home .info .event-location .icon-small {
+        margin-right: 1.59375rem; }
+    .home .info .btn-container {
+      margin-top: 4.71875rem; }
+      .home .info .btn-container .btn-regular {
+        background-color: #097078;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.875rem;
+        border-radius: 0.75rem;
+        padding: 0.96875rem 1.5625rem;
+        margin-left: 3.125rem; }
+        @media only screen and (max-width: 56.25em) {
+          .home .info .btn-container .btn-regular {
+            margin-left: 0; } }
+
+.about * {
+  font-size: 100%;
+  color: #2D698A;
+  opacity: 1;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+
+.about p {
+  line-height: 2; }
+
+.tracks * {
+  font-size: 100%;
+  color: #2d698a;
+  opacity: 1;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+
+.tracks p {
+  line-height: 2; }
+
+.tracks i {
+  font-size: 40px;
+  letter-spacing: 20px;
+  color: #bee2f5; }
+
+.tracks .outline {
+  border: #bee2f5 solid 2px;
+  border-radius: 10px;
+  padding: 0 20px 0 20px; }
+
+.tracks .img3 {
+  height: auto;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.tracks img {
+  margin: auto;
+  position: relative; }
+
+.sponsors {
+  margin-left: 21.75rem;
+  margin-right: 17rem;
+  margin-top: 15.625rem;
+  margin-bottom: 12.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center; }
+  .sponsors .heading-3 {
+    font-size: 3.75rem;
+    color: #2d698a;
+    font-weight: 500;
+    grid-column: 1 / 4; }
+  .sponsors .logo--ibm {
+    width: 19.6875rem;
+    height: 17rem;
+    margin-bottom: 5rem;
+    grid-column: 1 / 4; }
+  .sponsors .logo--mlh-2 {
+    width: 19.375rem;
+    height: 8.125rem; }
+  .sponsors .logo--jetbrains {
+    width: 11.5625rem;
+    height: 12.5rem; }
+  .sponsors .logo--stickermule {
+    width: 28.125rem;
+    height: 3.875rem; }
+
+.schedule {
+  font-family: "Roboto", sans-serif;
+  color: #51b7cd;
+  margin-top: 18.75rem;
+  margin-left: 8.75rem;
+  margin-right: 8.75rem;
+  margin-bottom: 16.375rem; }
+  .schedule .heading-3 {
+    color: #2d698a;
+    font-size: 3.75rem;
+    font-weight: 500;
+    margin-bottom: 0; }
+  .schedule .brief-text {
+    font-size: 1.5625rem;
+    margin-bottom: 1.875rem; }
+  .schedule .schedule-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    position: relative; }
+    .schedule .schedule-container .blue-car {
+      position: absolute;
+      top: 30%;
+      right: 0; }
+  .schedule .event-list {
+    display: grid;
+    grid-template-columns: 1fr; }
+    .schedule .event-list .date {
+      font-size: 3.125rem;
+      color: #2d698a;
+      font-weight: 400;
+      margin-bottom: 1.25rem; }
+    .schedule .event-list .event-item {
+      border: 0.125rem solid #BEE2F5;
+      border-radius: 0.5rem;
+      margin-bottom: 0.625rem;
+      padding: 0.9375rem;
+      font-size: 1.5625rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); }
+      .schedule .event-list .event-item .event-time {
+        text-align: left; }
+      .schedule .event-list .event-item .event-name {
+        text-align: right; }
+    .schedule .event-list--13, .schedule .event-list--14 {
+      align-self: flex-start; }
