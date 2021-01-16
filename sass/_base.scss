@@ -1,27 +1,27 @@
 // COLOR VARIABLES
 $color-primary: #f6fcdc;
-$color-primary-dark: #B28451;
+$color-primary-dark: #b28451;
 $color-secondary: #101d2c;
 $color-tertiary: #23232e;
 $color-grey-light-1: #f9f7f6;
 $color-grey-light-2: #aaa;
-$color-grey-dark-1: #54483A;
-$color-grey-dark-2: #6D5D4B;
+$color-grey-dark-1: #54483a;
+$color-grey-dark-2: #6d5d4b;
 $color-blue-medium: #06499c;
 $color-blue-dark: #09079c;
 $color-pink-dark: #b532ab;
-$color-pink-light:#fac8f5;
+$color-pink-light: #fac8f5;
 // NATOURS
 $natours-color-primary: #55c57a;
 $natours-color-primary-light: #7ed56f;
 $natours-color-primary-dark: #28b485;
 // NEXTER
 $nexter-color-primary: #c69963;
-$nexter-color-primary-dark: #B28451;
+$nexter-color-primary-dark: #b28451;
 // Trillio
-$trillio-color-primary:#eb2f64;
-$trillio-color-primary-light: #FF3366;
-$trillio-color-primary-dark: #BA265D;
+$trillio-color-primary: #eb2f64;
+$trillio-color-primary-light: #ff3366;
+$trillio-color-primary-dark: #ba265d;
 // Sirvey
 $sirvey-color-primary: #ee6e73;
 // DatingApp
@@ -33,8 +33,8 @@ $font-display: 'Montserrat', sans-serif;
 $default-font-size: 1.6rem;
 
 // BOX SHADOW STYLES
-$box-shadow-small: .5rem 1rem 2rem rgba(#000, .2);
-$box-shadow-medium: 0 1.5rem 4rem rgba(#000, .15);
+$box-shadow-small: 0.5rem 1rem 2rem rgba(#000, 0.2);
+$box-shadow-medium: 0 1.5rem 4rem rgba(#000, 0.15);
 
 // Break Points for media queries
 $bp-largest: 100em; // 1600 / 16 (default font size)
@@ -42,7 +42,6 @@ $bp-large: 75em; // 1200px
 $bp-medium: 56.25em; // 900px
 $bp-small: 37.5em; // 600px;
 $bp-smallest: 20em; // 320px;
-
 
 *,
 *::before,
@@ -55,6 +54,7 @@ $bp-smallest: 20em; // 320px;
 html {
   font-size: 62.5%; // 1 rem = 10px;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 
   @media only screen and (max-width: $bp-largest) {
     font-size: 50%;
@@ -74,7 +74,7 @@ body {
 
   // Customize scrollbar
   &::-webkit-scrollbar {
-    width: .75rem;
+    width: 0.75rem;
   }
 
   &::-webkit-scrollbar-track {
@@ -90,15 +90,27 @@ body {
   display: grid;
   // auto ==  min-content
   grid-template-rows: 80vh min-content min-content repeat(2, min-content);
-  grid-template-columns: [navbar-start] 8rem [navbar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [navbar-start] 8rem [navbar-end full-start] minmax(
+      6rem,
+      1fr
+    ) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(
+      6rem,
+      1fr
+    ) [full-end];
 
   @media only screen and (max-width: $bp-large) {
     grid-template-rows: 80vh min-content min-content repeat(2, min-content);
-    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      ) [center-end] minmax(6rem, 1fr) [full-end];
   }
 
   @media only screen and (max-width: $bp-medium) {
-    grid-template-rows: calc(65vh) min-content min-content min-content repeat(2, min-content);
+    grid-template-rows: calc(65vh) min-content min-content min-content repeat(
+        2,
+        min-content
+      );
   }
 
   @media only screen and (max-width: $bp-large) {
@@ -113,6 +125,6 @@ body {
   display: inline-block;
 
   .txt {
-    border-right: .2rem solid #777;
+    border-right: 0.2rem solid #777;
   }
 }
